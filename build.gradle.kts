@@ -36,6 +36,13 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2")
 	implementation("org.postgresql:postgresql:42.6.0")
+
+//	implementation("javax.servlet:jstl") // 부트 3.0 미만
+	implementation("jakarta.servlet:jakarta.servlet-api") //스프링부트 3.0 이상
+	implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api") //스프링부트 3.0 이상
+	implementation("org.glassfish.web:jakarta.servlet.jsp.jstl") //스프링부트 3.0 이상
+	implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
+	implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
 }
 
 tasks.withType<KotlinCompile> {
